@@ -10,4 +10,4 @@ valores_diarias = {"Duster":250, "Civic": 300, "Creta": 300, "Amarok": 300, "G63
 st.image(f"{carro}.png")
 st.subheader(f"Valor da diária: R$ {valores_diarias[carro]}")
 data_retirada = st.date_input("Selecione a data de retirada: ", datetime.now())
-data_devolucao = st.input("Selecione a data de entrega:", datetime.now())
+data_devolucao = st.date_input("Selecione a data de entrega:", datetime.now())
