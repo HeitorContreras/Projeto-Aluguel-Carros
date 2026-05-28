@@ -13,5 +13,6 @@ data_retirada = st.date_input("Selecione a data de retirada: ", datetime.now())
 data_devolucao = st.date_input("Selecione a data de entrega: ", datetime.now())
 
 if st.button("Alugar"):
-    dias = data_devolucao - data_retirada
+    dias = (data_devolucao - data_retirada).days
     total = dias * valores_diarias[carro]
+    st.succes(f"Alugando o por {dias} dias o custo total é: R$ {total}")
